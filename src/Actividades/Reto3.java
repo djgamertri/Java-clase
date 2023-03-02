@@ -4,33 +4,18 @@ import java.util.Scanner;
 
 public class Reto3 {
     public static void main(String[] args) {
-        Scanner Lectura = new Scanner(System.in);
-    
-        System.out.println("Ingrese la cantidad de productos");
-        int amount = Lectura.nextInt();
-
-        int pay = amount*10000;
-
-        System.out.println("Ingrese Cuanto paga");
-        int payment = Lectura.nextInt();
+        double[] arreglo = {2.0, 1.2, 1.5};
+        double min = arreglo[0];
         
-        if(payment>pay){
-            System.out.println("Pago insuficiente");
-            System.exit(0);
+        // Encuentra el valor mínimo
+        for (int i = 1; i < arreglo.length; i++) {
+            if (arreglo[i] < min) {
+                min = arreglo[i];
+            }
         }
 
-        int result = payment-pay;
-
-        System.out.println("El valor de la compra es: "+amount);
-        System.out.println("Su cambio es: "+ result);
-
-
-        // int RandomNumber = (int)(Math.random()*10);
-
-        // System.out.println(RandomNumber);
-
-
-        Lectura.close();
-        System.exit(0);
+        // Muestra el valor mínimo
+        System.out.println("El valor mínimo en el arreglo es: " + min);
     }
+
 }

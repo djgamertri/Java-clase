@@ -21,7 +21,7 @@ public class Reto1 {
             prom+=nota;
         }
         prom = prom/amount;
-        if(prom>3){
+        if(prom<3){
             System.out.println("Reprobaste");
             System.out.println("El promedio final de la materia es "+ prom);
         }else if(prom >= 3 && prom <= 4){
